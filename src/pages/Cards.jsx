@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import heart from "../assets/icons/heart.svg";
 import heartRed from "../assets/icons/heart-red.svg";
-import productsData from "../../products.json";
 import "../components/ContentBlock/shop.css"
 
 

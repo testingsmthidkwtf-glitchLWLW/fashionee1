@@ -1,7 +1,6 @@
 import "./footer.css"
 
 import smallDots from "../../assets/icons/dots-banner-small.svg"
-import middleDots from "../../assets/icons/dots-banner-mid.svg"
 import logo from "../../assets/icons/logo.svg"
 import payoneer from "../../assets/icons/payoneer.svg"
 import paypal from "../../assets/icons/paypal.svg"
