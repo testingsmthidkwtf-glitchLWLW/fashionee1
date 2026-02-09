@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { AuthContext } from "./context/AuthContext.jsx"
+import { AuthContext } from "./context/AuthContext.js"
 import Header from "./components/Header/Header.jsx";
 import ContentBlock from "./components/ContentBlock/ContentBlock.jsx";
 import Showcase from "./pages/Showcase.jsx"
