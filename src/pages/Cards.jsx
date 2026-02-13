@@ -89,7 +89,7 @@ const ProductCard = ({ product }) => {
       data-testid="product-card"
       data-product-id={id}
       data-price={price}
-      data-name={name || title} 
+      data-name={name} 
       data-color={normalizedColor}
       data-categories={normalizedCategories}
     >
