@@ -1,6 +1,5 @@
   const CartItem = ({ item, increase, decrease, removeItem }) => {
     const { id, name, price, oldPrice, quantity } = item;
-    // const displayName = name || title;
   
     return (
       <div 
