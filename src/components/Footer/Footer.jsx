@@ -13,12 +13,12 @@ const Footer = () => {
         <footer data-testid="footer" className="footer">
             <div className="container">
                 <div className="small-dots">
-                    <img src={smallDots} alt=""/>
+                    <img src={smallDots} alt="" />
                 </div>
                 <div className="footer-info">
                     <div className="column column1">
                         <div className="logo">
-                            <img src={logo} alt="logo"/>
+                            <img src={logo} alt="logo" />
                         </div>
 
                         <div className="about-brand">
@@ -77,8 +77,8 @@ const Footer = () => {
                         <div className="newsletter-form">
                             <form action="#">
                                 <label>
-                                    <input type="text" placeholder="Enter your email" className="input"/>
-                                    <img src={sendIcon} alt="send"/>
+                                    <input type="text" placeholder="Enter your email" className="input" />
+                                    <img src={sendIcon} alt="send" />
                                 </label>
                             </form>
                         </div>
@@ -89,25 +89,25 @@ const Footer = () => {
                     <div>© All right reserved. Fashionee 2020</div>
                     <div className="payment-methods-container">
                         <div>Payment methods:</div>
-                            <div className="payment-methods">
-                                <div className="payment-method">
-                                    <img src={visa} alt="visa"/>
-                                </div>
-                                <div className="payment-method">
-                                    <img src={mastercard} alt="mastercard"/>
-                                </div>
-                                <div className="payment-method">
-                                    <img src={paypal} alt="paypal"/>
-                                </div>
-                                <div className="payment-method">
-                                    <img src={payoneer} alt="payoneer"/>
-                                </div>
+                        <div className="payment-methods">
+                            <div className="payment-method">
+                                <img src={visa} alt="visa" />
                             </div>
+                            <div className="payment-method">
+                                <img src={mastercard} alt="mastercard" />
+                            </div>
+                            <div className="payment-method">
+                                <img src={paypal} alt="paypal" />
+                            </div>
+                            <div className="payment-method">
+                                <img src={payoneer} alt="payoneer" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
     )
-}
+};
 
 export default Footer;
