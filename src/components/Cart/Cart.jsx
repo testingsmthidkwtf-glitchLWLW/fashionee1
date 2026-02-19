@@ -17,14 +17,14 @@ const Cart = () => {
   const [promoCode, setPromoCode] = useState("");
   const [appliedPromo, setAppliedPromo] = useState("");
 
-  /* ---------- QUANTITY HANDLERS ---------- */
+  /* Колво */
   const increase = (id) => {
     setCartItems((prev) => {
       const updated = prev.map((item) =>
         item.id === id ? { ...item, quantity: Number(item.quantity) + 1 } : item
       );
       localStorage.setItem("cart", JSON.stringify(updated));
-      window.dispatchEvent(new Event("storage")); //added
+      window.dispatchEvent(new Event("storage")); //?
       return updated;
     });
   };
@@ -46,15 +46,15 @@ const Cart = () => {
     setCartItems((prev) => {
       const updated = prev.filter((item) => item.id !== id);
       localStorage.setItem("cart", JSON.stringify(updated));
-      window.dispatchEvent(new Event("storage")); //added
+      window.dispatchEvent(new Event("storage")); //?
       return updated;
     });
   };
 
-  /* ---------- PROMOCODE HANDLERS ---------- */
+  /* Промо */
   const applyPromo = () => setAppliedPromo(promoCode.trim());
 
-  /* ---------- CALCULATIONS ---------- */
+  /* Калькуляция*/
   const orderPrice = useMemo(() => {
     return Number(
       cartItems
@@ -73,7 +73,7 @@ const Cart = () => {
     return Number((orderPrice - discountValue + DELIVERY_PRICE).toFixed(2));
   }, [orderPrice, discountValue]);
 
-  /* ---------- CHECKOUT ---------- */
+  /* Чекаут */
   const handleCheckout = () => {
     console.log("Your order:");
     console.log({
@@ -109,7 +109,6 @@ const Cart = () => {
           />
         </div>
 
-        {/* PROMO CODE */}
         <div className="promo-code-wrapper">
           <div className="info">
             <div className="title">You Have A Promo Code?</div>

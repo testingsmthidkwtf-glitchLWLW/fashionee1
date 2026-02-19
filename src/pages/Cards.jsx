@@ -1,5 +1,3 @@
-//npx playwright test __tests__/e2e/stage4/cart.spec.js
-
 import { useEffect, useState } from "react";
 import heart from "../assets/icons/heart.svg";
 import heartRed from "../assets/icons/heart-red.svg";
@@ -43,7 +41,6 @@ const ProductCard = ({ product }) => {
   const isFavorite = favorites.includes(id);
   const quantity = Number(cart.find(item => item.id === id)?.quantity || 0);
 
-  /* --- Нормализация цветов и категорий --- */
   const normalizedColor = (() => {
     if (!product.color) return ""; // если цвета нет
     if (Array.isArray(product.color)) {

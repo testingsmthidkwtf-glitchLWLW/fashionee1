@@ -9,7 +9,6 @@
         data-name={name}
       >
         <div className="product-info">
-          {/* <div className="title" data-testid="cart-item-name">{displayName}</div> */}
           <div className="title" data-testid="cart-item-name">
           {name}
         </div>
@@ -42,8 +41,7 @@
           </button>
         </div>
       </div>
-    );
-  };
+    )
+  }
   
   export default CartItem;
-  

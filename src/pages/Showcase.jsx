@@ -32,10 +32,7 @@ const Showcase = () => {
   const [sortBy, setSortBy] = useState("relevance");
   const [isSortOpen, setIsSortOpen] = useState(false);
 
-
-
-
-  /* ---------- init products + price bounds ---------- */
+  /* init products + price bounds*/
   useEffect(() => {
     if (!Array.isArray(productsData.products)) return;
 
@@ -52,7 +49,7 @@ const Showcase = () => {
     })
     }, []);
 
-  /* ---------- sidebar options ---------- */
+  /* sidebar options */
 const categories = products.length
 ? ["All", ...Array.from(new Set(products.flatMap(p => p.categories)))]
 : ["All"];
@@ -71,7 +68,7 @@ const colors = products.length
   const minPrice = priceBounds.min;
   const maxPrice = priceBounds.max;
 
-  /* ---------- filtering (FIXED PRICE LOGIC) ---------- */
+  /* filtering (FIXED PRICE LOGIC)*/
     const filteredProducts = useMemo(() => {
         const normalizedQuery = searchQuery.trim().toLowerCase();
 
@@ -131,24 +128,6 @@ const colors = products.length
             });
   }, [products, filters, searchQuery, minPrice, maxPrice]);
 
-
-// const sortedProducts = useMemo(() => {
-//     const list = [...filteredProducts];
-  
-//     if (sortBy === "alphabet") {
-//       list.sort((a, b) =>
-//         (a.name || "").localeCompare(b.name || "")
-//       );
-//     }
-  
-//     if (sortBy === "price") {
-//       list.sort((a, b) => a.price - b.price);
-//     }
-  
-//     // relevance → дефолтный порядок
-//     return list;
-//   }, [filteredProducts, sortBy]);
-
 const sortedProducts = useMemo(() => {
     const list = [...filteredProducts];
   
@@ -172,10 +151,7 @@ const sortedProducts = useMemo(() => {
     return list;
   }, [filteredProducts, sortBy]);  
 
-  
-
   const totalPages = Math.ceil(sortedProducts.length / PRODUCTS_PER_PAGE);
-
 
   const paginatedProducts = useMemo(() => {
     const start = (page - 1) * PRODUCTS_PER_PAGE;
@@ -183,8 +159,7 @@ const sortedProducts = useMemo(() => {
   }, [sortedProducts, page]);
 
 
-
-  /* ---------- сброс страницы при изменениях ---------- */
+  /* сброс страницы */
   useEffect(() => {
     setPage(1);
   }, [filters, searchQuery, sortBy]);
@@ -196,7 +171,7 @@ const sortedProducts = useMemo(() => {
   }, [page, totalPages]);
   
 
-  /* ---------- render ---------- */
+  /* render */
   return (
     <section data-testid="showcase" className="container">
       <div className="shop-controls">
@@ -213,7 +188,7 @@ const sortedProducts = useMemo(() => {
           products in this category.
         </div>
 
-{/* ---------- SORT ---------- */}
+{/* Sort */}
 <div className="shop-sort">
           <button
             data-testid="sort-selector"
